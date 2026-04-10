@@ -30,7 +30,7 @@ export function Layout() {
           <div className="flex justify-between h-20">
             <div className="flex items-center flex-1 min-w-0 pr-4">
               <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
-                <img src="/logo.jpg" alt="Okanime Age Grade Logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-igbo-gold shrink-0" />
+                <img src="/logo.jpg" alt="Okanime Age Grade Logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-igbo-gold shrink-0 bg-white p-0.5 shadow-md" />
                 <div className="min-w-0">
                   <h1 className="font-bold text-base sm:text-xl leading-tight truncate">Okanime Age Grade</h1>
                   <p className="text-[10px] sm:text-xs text-igbo-gold uppercase tracking-wider truncate">Diaspora • Umuoma Ogbe</p>
@@ -139,7 +139,7 @@ export function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src="/logo.jpg" alt="Okanime Age Grade Logo" className="w-10 h-10 rounded-full object-cover border border-igbo-gold" />
+                <img src="/logo.jpg" alt="Okanime Age Grade Logo" className="w-10 h-10 rounded-full object-cover border border-igbo-gold bg-white p-0.5" />
                 <h3 className="text-xl font-bold text-white">Okanime Diaspora</h3>
               </div>
               <p className="text-sm text-gray-400 mb-4">
