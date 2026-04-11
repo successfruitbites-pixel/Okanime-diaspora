@@ -4,6 +4,7 @@ import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Dashboard } from './pages/Dashboard';
 import { About, Activities, Leadership, Auth, Achievements, Gallery } from './pages/PublicPages';
+import TestSupabase from './pages/TestSupabase';  // ✅ ADDED THIS LINE
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="gallery" element={<Gallery />} />
             <Route path="auth" element={<Auth />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="test-supabase" element={<TestSupabase />} />  {/* ✅ ADDED THIS LINE */}
           </Route>
         </Routes>
       </BrowserRouter>
