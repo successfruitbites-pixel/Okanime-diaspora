@@ -7,6 +7,10 @@ export default function TestSupabase() {
   const [cycles, setCycles] = useState<any[]>([]);
   const supabase = createClient();
 
+  // Debug: Check if environment variables are loaded
+  console.log('ENV Check - URL:', import.meta.env.VITE_SUPABASE_URL);
+  console.log('ENV Check - Key exists:', !!import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY);
+
   useEffect(() => {
     async function testConnection() {
       try {
@@ -61,26 +65,4 @@ export default function TestSupabase() {
       </p>
     </div>
   );
-}
-import { createClient } from '../lib/supabase/client';
-import { useEffect, useState } from 'react';
-
-export default function TestSupabase() {
-  const [status, setStatus] = useState('Testing connection...');
-  const [user, setUser] = useState<any>(null);
-  const [cycles, setCycles] = useState<any[]>([]);
-  const supabase = createClient();
-
-  // ✅ ADD THESE TWO LINES RIGHT HERE (after the useState lines, before useEffect)
-  console.log('ENV Check - URL:', import.meta.env.VITE_SUPABASE_URL);
-  console.log('ENV Check - Key exists:', !!import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY);
-
-  useEffect(() => {
-    async function testConnection() {
-      // ... rest of your existing code (do not change)
-    }
-    testConnection();
-  }, []);
-
-  // ... rest of your existing return (do not change)
 }
