@@ -14,12 +14,13 @@ import {
 export function Dashboard() {
   const { user } = useAuth();
 
-// Get display name from Supabase user metadata or email
-const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Member';
-const memberId = user?.id?.substring(0, 8) || 'N/A';
-const joinDate = user?.created_at 
-  ? new Date(user.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
-  : 'N/A';
+  // Get display name from Supabase user metadata or email
+  const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Member';
+  const memberId = user?.id?.substring(0, 8) || 'N/A';
+  const joinDate = user?.created_at 
+    ? new Date(user.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+    : 'N/A';
+  
   const [activeTab, setActiveTab] = useState('overview');
 
   if (!user) return null;
@@ -36,8 +37,8 @@ const joinDate = user?.created_at
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-igbo-dark">Welcome, {user.name}</h1>
-          <p className="text-gray-600 mt-1">Member ID: OKA-{user.id.padStart(4, '0')} | Joined: {user.joinDate}</p>
+          <h1 className="text-3xl font-bold text-igbo-dark">Welcome, {displayName}</h1>
+          <p className="text-gray-600 mt-1">Member ID: {memberId} | Joined: {joinDate}</p>
         </div>
         <a href="#" className="flex items-center gap-2 text-igbo-terra hover:text-orange-800 font-medium bg-orange-50 px-4 py-2 rounded-md border border-orange-200">
           <BookOpen size={18} />
