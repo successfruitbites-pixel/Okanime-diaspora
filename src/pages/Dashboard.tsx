@@ -13,6 +13,13 @@ import {
 
 export function Dashboard() {
   const { user } = useAuth();
+
+// Get display name from Supabase user metadata or email
+const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Member';
+const memberId = user?.id?.substring(0, 8) || 'N/A';
+const joinDate = user?.created_at 
+  ? new Date(user.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  : 'N/A';
   const [activeTab, setActiveTab] = useState('overview');
 
   if (!user) return null;
