@@ -3,7 +3,8 @@ import { AuthProvider } from './context/AuthContext';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Dashboard } from './pages/Dashboard';
-import { About, Activities, Leadership, Auth, Achievements, Gallery } from './pages/PublicPages';
+import { About, Activities, Leadership, Achievements, Gallery } from './pages/PublicPages';
+import Auth from './pages/Auth';
 import TestSupabase from './pages/TestSupabase';  // ✅ ADDED THIS LINE
 
 export default function App() {
