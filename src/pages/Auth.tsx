@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '../context/AuthContext';
 
 export default function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -26,7 +26,6 @@ export default function Auth() {
       if (error) {
         setError(error.message);
       } else {
-        // Redirect to dashboard on success
         navigate('/dashboard');
       }
     } catch (err: any) {
