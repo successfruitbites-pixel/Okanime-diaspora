@@ -9,13 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.49.1",
-    "@supabase/ssr": "^0.5.2",
-    "lucide-react": "^0.546.0"
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.0"
-  },
+  "@supabase/supabase-js": "^2.49.1",
+  "@supabase/ssr": "^0.5.2",
+  "lucide-react": "^0.546.0",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.22.0"
+}
   "devDependencies": {
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
