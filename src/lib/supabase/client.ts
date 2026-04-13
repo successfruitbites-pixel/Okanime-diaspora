@@ -5,5 +5,5 @@ const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Also export a function for components that prefer this pattern
-export const createClient = () => supabase;
+// Also export as function for components that prefer it
+export const createSupabaseClient = () => supabase;
