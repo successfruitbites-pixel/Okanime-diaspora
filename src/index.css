@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
-@theme {
+/* Custom CSS Variables (replaces @theme) */
+:root {
   --color-igbo-green: #11421b;
   --color-igbo-gold: #d4af37;
   --color-igbo-terra: #c84b31;
@@ -8,11 +7,28 @@
   --color-igbo-light: #fdfbf7;
 }
 
-@layer utilities {
-  .uli-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  .uli-pattern-dark {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2311421b' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
+/* Utility classes (replaces @layer utilities) */
+.uli-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
+
+.uli-pattern-dark {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2311421b' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Additional utility classes for colors if needed */
+.bg-igbo-green { background-color: var(--color-igbo-green); }
+.bg-igbo-gold { background-color: var(--color-igbo-gold); }
+.bg-igbo-terra { background-color: var(--color-igbo-terra); }
+.bg-igbo-dark { background-color: var(--color-igbo-dark); }
+.bg-igbo-light { background-color: var(--color-igbo-light); }
+
+.text-igbo-green { color: var(--color-igbo-green); }
+.text-igbo-gold { color: var(--color-igbo-gold); }
+.text-igbo-terra { color: var(--color-igbo-terra); }
+.text-igbo-dark { color: var(--color-igbo-dark); }
+.text-igbo-light { color: var(--color-igbo-light); }
+
+.border-igbo-green { border-color: var(--color-igbo-green); }
+.border-igbo-gold { border-color: var(--color-igbo-gold); }
+.border-igbo-terra { border-color: var(--color-igbo-terra); }
